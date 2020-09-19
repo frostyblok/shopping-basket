@@ -1,10 +1,5 @@
 module InputParserHelper
   EXEMPTED_PRODUCTS = %w(book chocolate pills)
-  PRODUCT_ARRAY_WITH_ONE_WORD_NAME_SIZE = 4
-
-  def one_word_product?(line)
-    line.size == PRODUCT_ARRAY_WITH_ONE_WORD_NAME_SIZE
-  end
 
   def is_exempted_product?(product_name)
     EXEMPTED_PRODUCTS.one? { |good| product_name.include? good }

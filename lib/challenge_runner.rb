@@ -1,7 +1,7 @@
 require_relative '../lib/input_parser'
 require_relative '../lib/output_printer'
 
-class Runner
+class ChallengeRunner
   def initialize(file_name)
     @file_name = file_name
   end
