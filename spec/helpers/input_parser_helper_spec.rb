@@ -3,20 +3,6 @@ require_relative '../../helpers/input_parser_helper'
 
 describe InputParserHelper do
   let(:subject) { InputParser.new('input_1').extend(described_class) }
-  let(:first_product) { ["2", "book", "at", "12.49"] }
-  let(:second_product) { ["1", "chocolate", "bar", "at", "0.85"] }
-  let(:third_product) { [1, "imported bottle of perfume", 27.99, "import_duty_without_exemption"] }
-  let(:fourth_product) { [1, "bottle of perfume", 18.99, "basic_sales"] }
-
-  context "#one_word_item" do
-    it 'returns true' do
-      expect(subject.one_word_product?(first_product)).to be_truthy
-    end
-
-    it 'returns false' do
-      expect(subject.one_word_product?(second_product)).to be_falsy
-    end
-  end
 
   context "#is_exempted_product?" do
     let(:exempted_product) { "packet of headache pills" }

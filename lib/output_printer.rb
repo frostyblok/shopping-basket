@@ -24,7 +24,7 @@ class OutputPrinter
     updated_products = @price_calculator.product_prices_after_calculations!
 
     updated_products.map do |product|
-      # Formats the output as expected from the challenge instructions
+      # Formats the output as expected from the challenge instructions - adds a new line for each product
       "#{product[PriceCalculator::PRODUCT_QUANTITY]} #{product[PriceCalculator::PRODUCT_NAME]}: #{product[PriceCalculator::PRODUCT_PRICE_WITH_TAX]}\n"
     end.join
   end
